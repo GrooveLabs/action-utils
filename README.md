@@ -31,7 +31,7 @@ will be transformed to:
 { FOO: 'FOO', BAR: 'BAR' }
 ```
 
-### standardActions()
+### `standardActions()`
 
 This is an opinionated usage of keyMirror that provides some default action names to represent lifecycles (BEGIN, PROGRESS, SUCCESS, FAILURE). This is very useful for any kind of action that involves an API call.
 
