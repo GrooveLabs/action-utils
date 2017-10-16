@@ -2,7 +2,7 @@
   "name": "action-utils",
   "version": "1.0.0",
   "description": "helpers for creating well-named redux action in a declarative way",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GrooveLabs/action-utils.git"
@@ -12,5 +12,20 @@
   "bugs": {
     "url": "https://github.com/GrooveLabs/action-utils/issues"
   },
-  "homepage": "https://github.com/GrooveLabs/action-utils#readme"
+  "homepage": "https://github.com/GrooveLabs/action-utils#readme",
+  "babel": {
+    "presets": [
+      "stage-0"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-webpack-alias": "^2.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
 }
