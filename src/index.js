@@ -31,5 +31,6 @@ export function standardActions() {
     'PROGRESS',
     'SUCCESS',
     'FAILURE',
+    'CANCEL',
   ]);
 }
