@@ -18,6 +18,9 @@
       "stage-0"
     ]
   },
+  "scripts": {
+    "build": "babel src/ -d build/"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",

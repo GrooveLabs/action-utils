@@ -1,0 +1,21 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - ~/.npm
+notifications:
+  email: true
+node_js:
+  - '8'
+install: yarn
+jobs:
+  include:
+    - stage: test
+      script:
+        - yarn lint
+        - yarn test
+    - stage: build
+      if: branch = master
+      script:
+        - yarn build
+        - yarn travis-deploy-once "yarn semantic-release"
