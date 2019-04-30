@@ -10,10 +10,6 @@ node_js:
 install: yarn
 jobs:
   include:
-    - stage: test
-      script:
-        - yarn lint
-        - yarn test
     - stage: build
       if: branch = master
       script:
