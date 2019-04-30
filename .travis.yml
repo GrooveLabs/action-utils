@@ -10,8 +10,8 @@ node_js:
 install: yarn
 jobs:
   include:
-    - stage: build
+    - stage: build:prod
       if: branch = master
       script:
-        - yarn build
-        - yarn travis-deploy-once "yarn semantic-release"
+        - yarn build:prod
+        - yarn travis-deploy-once --pro "yarn semantic-release"

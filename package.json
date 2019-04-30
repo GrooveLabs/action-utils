@@ -1,6 +1,6 @@
 {
   "name": "@groove-labs/action-utils",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "helpers for creating well-named redux action in a declarative way",
   "main": "build/index.js",
   "repository": {
@@ -20,8 +20,7 @@
   },
   "scripts": {
     "build:dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --config config/webpack.config.dev.js",
-    "build:prod": "NODE_ENV=production node_modules/.bin/webpack --config config/webpack.config.prod.js",
-    "build": "babel src/ -d build/"
+    "build:prod": "NODE_ENV=production node_modules/.bin/webpack --config config/webpack.config.prod.js"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
