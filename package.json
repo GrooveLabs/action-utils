@@ -1,5 +1,5 @@
 {
-  "name": "action-utils",
+  "name": "@groove-labs/action-utils",
   "version": "1.0.1",
   "description": "helpers for creating well-named redux action in a declarative way",
   "main": "build/index.js",
