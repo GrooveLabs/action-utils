@@ -49,5 +49,6 @@
     "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  "resolutions": { "tar": ">=4.4.2" }
 }
