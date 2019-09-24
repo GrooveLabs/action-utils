@@ -51,6 +51,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "resolutions": {
+    "set-value": ">=2.0.1",
     "tar": ">=4.4.2"
   },
   "dependencies": {
