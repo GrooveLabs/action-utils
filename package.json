@@ -50,5 +50,13 @@
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2"
   },
-  "resolutions": { "tar": ">=4.4.2" }
+  "resolutions": {
+    "tar": ">=4.4.2"
+  },
+  "dependencies": {
+    "fstream": "^1.0.12",
+    "lodash": "^4.17.15",
+    "lodash.template": "^4.5.0",
+    "tar": "^4.4.12"
+  }
 }
