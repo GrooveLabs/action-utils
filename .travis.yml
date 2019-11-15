@@ -14,4 +14,5 @@ jobs:
       if: branch = master
       script:
         - yarn build:prod
-        - yarn travis-deploy-once --pro "yarn semantic-release"
+        - yarn verify-es5
+        - yarn semantic-release
