@@ -46,12 +46,9 @@
   },
   "resolutions": {
     "set-value": ">=2.0.1",
-    "tar": ">=4.4.2"
-  },
-  "dependencies": {
-    "fstream": "^1.0.12",
-    "lodash": "^4.17.15",
-    "lodash.template": "^4.5.0",
-    "tar": "^4.4.12"
+    "tar": ">=4.4.2",
+    "fstream": ">=1.0.12",
+    "lodash": ">=4.17.15",
+    "lodash.template": ">=4.5.0"
   }
 }
