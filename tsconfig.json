@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+  }
+}

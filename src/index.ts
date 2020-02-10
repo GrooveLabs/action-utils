@@ -1,4 +1,6 @@
-function createActionsHelper(actionKey, actions) {
+interface StringMap { [key: string]: string | StringMap }
+
+function createActionsHelper(actionKey: string, actions: string | StringMap): string | StringMap {
   if (typeof actions === 'string') {
     if (actionKey) {
       return `${actionKey}/${actions}`;
@@ -6,7 +8,7 @@ function createActionsHelper(actionKey, actions) {
 
     return actions;
   }
-  return Object.entries(actions).reduce((previous, entry) => {
+  return Object.entries(actions).reduce((previous: StringMap, entry: [string, string | StringMap]) => {
     const [key, value] = entry;
     if (key === value) return { ...previous, [key]: createActionsHelper(actionKey, value) };
     let newKey = key;
@@ -17,15 +19,15 @@ function createActionsHelper(actionKey, actions) {
   }, {});
 }
 
-export function createActions(actions) {
+export function createActions(actions: StringMap): string | StringMap {
   return createActionsHelper(null, actions);
 }
 
-export function keyMirror(keys) {
-  return keys.reduce((previous, key) => ({ ...previous, [key]: key }), {});
+export function keyMirror(keys: string[]): StringMap {
+  return keys.reduce((previous: StringMap, key: string) => ({ ...previous, [key]: key }), {});
 }
 
-export function standardActions() {
+export function standardActions(): StringMap {
   return keyMirror([
     'BEGIN',
     'PROGRESS',
