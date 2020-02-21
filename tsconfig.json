@@ -4,9 +4,8 @@
     "noImplicitAny": true,
     "module": "CommonJS",
     "target": "es5",
-    "jsx": "react",
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
+    "allowJs": false,
     "sourceMap": true,
     "baseUrl": ".",
   }

@@ -1,11 +1,12 @@
-import { createActions } from "../src";
+import { createActions, standardActions } from "../src";
 
-const actions = createActions({
+const types = {
   FOO: {
-    BAR: {
-      BAZ: 'BAZ',
-    },
-  },
-});
+    BAR: 'BAR',
+    BAZ: standardActions(),
+  }
+};
 
-console.log(actions);
+const actionTypes = createActions<typeof types>(types);
+
+console.log(actionTypes);
