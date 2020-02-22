@@ -33,7 +33,7 @@ will be transformed to:
 
 ### `standardActions()`
 
-This is an opinionated usage of keyMirror that provides some default action names to represent lifecycles (BEGIN, PROGRESS, SUCCESS, FAILURE). This is very useful for any kind of action that involves an API call.
+This is an opinionated usage of keyMirror that provides some default action names to represent lifecycles (BEGIN, PROGRESS, SUCCESS, FAILURE, CANCEL). This is very useful for any kind of action that involves an API call.
 
 
 ## Usage
@@ -62,6 +62,7 @@ import { createActions, keyMirror, standardActions } from 'action-utils';
 const types = {
   PEOPLE: {
     FETCH_PEOPLE: standardActions(),
+    // keyMirror doesn't quite work with type definitions right now, unfortunately
     SELECT_PEOPLE: 'SELECT_PEOPLE',
     UNSELECT_PEOPLE: 'UNSELECT_PEOPLE',
     SET_ACTIVE_PERSON_ID: 'SET_ACTIVE_PERSON_ID',
