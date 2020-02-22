@@ -4,7 +4,7 @@ const resolveConfig = require('./webpack.config.resolve');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, '../src/index.js'),
+    index: path.resolve(__dirname, '../src/index.ts'),
   },
   resolve: resolveConfig,
   output: {
@@ -23,6 +23,13 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'babel-loader',
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'ts-loader',
         ],
       },
     ],
