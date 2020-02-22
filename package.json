@@ -1,8 +1,9 @@
 {
   "name": "@groove-labs/action-utils",
   "version": "0.0.0-development",
-  "description": "helpers for creating well-named redux action in a declarative way",
+  "description": "helpers for creating well-named redux actions in a declarative way",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GrooveLabs/action-utils.git"
@@ -20,8 +21,8 @@
     ]
   },
   "scripts": {
-    "build:dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --config config/webpack.config.dev.js",
-    "build:prod": "NODE_ENV=production node_modules/.bin/webpack --config config/webpack.config.prod.js",
+    "build": "tsc src/*.ts --outDir build",
+    "start": "yarn build --watch",
     "verify-es5": "./node_modules/.bin/es-check es5 './build/**/*.js'"
   },
   "devDependencies": {
@@ -34,20 +35,11 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",
-    "clean-webpack-plugin": "^0.1.19",
     "es-check": "^5.1.0",
     "eslint": "^6.8.0",
     "semantic-release": "^15.13.3",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.5",
-    "webpack": "^4.19.0",
-    "webpack-build-notifier": "^0.1.29",
-    "webpack-bundle-analyzer": "^3.0.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dashboard": "^2.0.0",
-    "webpack-dev-server": "^3.1.8",
-    "webpack-merge": "^4.1.4",
-    "webpack-node-externals": "^1.7.2"
+    "typescript": "^3.7.5"
   },
   "resolutions": {
     "set-value": ">=2.0.1",

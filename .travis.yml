@@ -10,9 +10,9 @@ node_js:
 install: yarn
 jobs:
   include:
-    - stage: build:prod
+    - stage: Release
       if: branch = master
       script:
-        - yarn build:prod
+        - yarn build
         - yarn verify-es5
         - yarn semantic-release
