@@ -54,3 +54,22 @@ export const actionTypes = createActions({
   },
 }).PEOPLE;
 ```
+
+### Usage In Typescript
+```typescript
+
+import { createActions, keyMirror, standardActions } from 'action-utils';
+const types = {
+  PEOPLE: {
+    FETCH_PEOPLE: standardActions(),
+    SELECT_PEOPLE: 'SELECT_PEOPLE',
+    UNSELECT_PEOPLE: 'UNSELECT_PEOPLE',
+    SET_ACTIVE_PERSON_ID: 'SET_ACTIVE_PERSON_ID',
+    UNSET_ACTIVE_PERSON_ID: 'UNSET_ACTIVE_PERSON_ID',
+    MOVE_TO_PAGE: 'MOVE_TO_PAGE',
+  },
+}
+
+// Pass through the generic type for some nice type auto-completions
+export const actionTypes = createActions<typeof types>(types).PEOPLE;
+```
