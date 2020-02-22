@@ -1,2 +1,53 @@
-module.exports=function(e){var r={};function t(n){if(r[n])return r[n].exports;var o=r[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}return t.m=e,t.c=r,t.d=function(e,r,n){t.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,r){if(1&r&&(e=t(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(t.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var o in e)t.d(n,o,function(r){return e[r]}.bind(null,o));return n},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},t.p="",t(t.s=0)}([function(e,r,t){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var r,t=1,n=arguments.length;t<n;t++)for(var o in r=arguments[t])Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o]);return e}).apply(this,arguments)};function o(e){return e.reduce(function(e,r){var t;return n(n({},e),((t={})[r]=r,t))},{})}Object.defineProperty(r,"__esModule",{value:!0}),r.createActions=function(e){return function e(r,t){return"string"==typeof t?r?r+"/"+t:t:Object.entries(t).reduce(function(t,o){var u,i,c=o[0],f=o[1];if(c===f)return n(n({},t),((u={})[c]=e(r,f),u));var a=c;return r&&(a=r+"/"+c),n(n({},t),((i={})[c]=e(a,f),i))},{})}(null,e)},r.keyMirror=o,r.standardActions=function(){return o(["BEGIN","PROGRESS","SUCCESS","FAILURE","CANCEL"])}}]);
-//# sourceMappingURL=index.js.map
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+exports.__esModule = true;
+function createActionsHelper(actionKey, actions) {
+    if (typeof actions === 'string') {
+        if (actionKey) {
+            return actionKey + "/" + actions;
+        }
+        return actions;
+    }
+    return Object.entries(actions).reduce(function (previous, _a) {
+        var _b, _c;
+        var key = _a[0], value = _a[1];
+        if (key === value)
+            return __assign({}, previous, (_b = {}, _b[key] = createActionsHelper(actionKey, value), _b));
+        var newKey = key;
+        if (actionKey) {
+            newKey = actionKey + "/" + key;
+        }
+        return __assign({}, previous, (_c = {}, _c[key] = createActionsHelper(newKey, value), _c));
+    }, {});
+}
+function createActions(actions) {
+    return createActionsHelper(null, actions);
+}
+exports.createActions = createActions;
+function keyMirror(keys) {
+    return keys.reduce(function (previous, key) {
+        var _a;
+        return (__assign({}, previous, (_a = {}, _a[key] = key, _a)));
+    }, {});
+}
+exports.keyMirror = keyMirror;
+function standardActions() {
+    return keyMirror([
+        'BEGIN',
+        'PROGRESS',
+        'SUCCESS',
+        'FAILURE',
+        'CANCEL',
+    ]);
+}
+exports.standardActions = standardActions;
