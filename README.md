@@ -63,11 +63,11 @@ const types = {
   PEOPLE: {
     FETCH_PEOPLE: standardActions(),
     // keyMirror doesn't quite work with type definitions right now, unfortunately
-    SELECT_PEOPLE: 'SELECT_PEOPLE',
-    UNSELECT_PEOPLE: 'UNSELECT_PEOPLE',
-    SET_ACTIVE_PERSON_ID: 'SET_ACTIVE_PERSON_ID',
-    UNSET_ACTIVE_PERSON_ID: 'UNSET_ACTIVE_PERSON_ID',
-    MOVE_TO_PAGE: 'MOVE_TO_PAGE',
+    SELECT_PEOPLE: '',
+    UNSELECT_PEOPLE: '',
+    SET_ACTIVE_PERSON_ID: '',
+    UNSET_ACTIVE_PERSON_ID: '',
+    MOVE_TO_PAGE: '',
   },
 }
 
