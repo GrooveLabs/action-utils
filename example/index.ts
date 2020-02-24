@@ -4,6 +4,9 @@ const types = {
   FOO: {
     BAR: 'BAR',
     BAZ: standardActions(),
+    FIZZ: {
+      BUZZ: standardActions(),
+    }
   }
 };
 

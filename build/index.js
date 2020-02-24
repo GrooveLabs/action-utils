@@ -22,12 +22,12 @@ function createActionsHelper(actionKey, actions) {
         var _b, _c;
         var key = _a[0], value = _a[1];
         if (key === value)
-            return __assign({}, previous, (_b = {}, _b[key] = createActionsHelper(actionKey, value), _b));
+            return __assign(__assign({}, previous), (_b = {}, _b[key] = createActionsHelper(actionKey, value), _b));
         var newKey = key;
         if (actionKey) {
             newKey = actionKey + "/" + key;
         }
-        return __assign({}, previous, (_c = {}, _c[key] = createActionsHelper(newKey, value), _c));
+        return __assign(__assign({}, previous), (_c = {}, _c[key] = createActionsHelper(newKey, value), _c));
     }, {});
 }
 function createActions(actions) {
@@ -37,7 +37,7 @@ exports.createActions = createActions;
 function keyMirror(keys) {
     return keys.reduce(function (previous, key) {
         var _a;
-        return (__assign({}, previous, (_a = {}, _a[key] = key, _a)));
+        return (__assign(__assign({}, previous), (_a = {}, _a[key] = key, _a)));
     }, {});
 }
 exports.keyMirror = keyMirror;
