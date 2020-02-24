@@ -9,7 +9,7 @@ function createActionsHelper(actionKey: string, actions: string | StringMap): st
     return actions;
   }
   return Object.entries(actions).reduce((previous, [key, value]) => {
-    if (key === value) return { ...previous, [key]: createActionsHelper(actionKey, value) };
+    if (key === value || value === '') return { ...previous, [key]: createActionsHelper(actionKey, key) };
     let newKey = key;
     if (actionKey) {
       newKey = `${actionKey}/${key}`;

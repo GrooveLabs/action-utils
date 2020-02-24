@@ -2,12 +2,12 @@ import { createActions, standardActions } from "../src";
 
 const types = {
   FOO: {
-    BAR: 'BAR',
+    BAR: '',
     BAZ: standardActions(),
     FIZZ: {
-      BUZZ: standardActions(),
-    }
-  }
+      BUZZ: 'BUZZ',
+    },
+  },
 };
 
 const actionTypes = createActions<typeof types>(types);
