@@ -2,8 +2,7 @@
   "compilerOptions": {
     "outDir": "./build/",
     "noImplicitAny": true,
-    "module": "CommonJS",
-    "target": "es5",
+    "target": "ES5",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "sourceMap": true,
