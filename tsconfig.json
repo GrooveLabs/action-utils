@@ -3,7 +3,7 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "target": "es5",
-    "module": "es6",
+    "module": "amd",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "sourceMap": true,
