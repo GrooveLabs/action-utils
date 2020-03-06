@@ -2,11 +2,14 @@
   "compilerOptions": {
     "outDir": "./build/",
     "noImplicitAny": true,
-    "module": "AMD",
-    "target": "ES5",
+    "module": "es6",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "sourceMap": true,
     "baseUrl": ".",
-  }
+    "declaration": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }

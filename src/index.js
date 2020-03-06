@@ -46,4 +46,3 @@ export function standardActions() {
         'CANCEL',
     ]);
 }
-//# sourceMappingURL=index.js.map
