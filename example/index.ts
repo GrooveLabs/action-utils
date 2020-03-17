@@ -1,4 +1,4 @@
-import { createActions, standardActions } from "../src";
+import { createActions, standardActions } from "../build";
 
 const types = {
   FOO: {
