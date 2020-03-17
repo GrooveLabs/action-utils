@@ -18,15 +18,15 @@ function createActionsHelper(actionKey: string, actions: string | StringMap): st
   }, {} as StringMap);
 }
 
-export function createActions<T>(actions: StringMap): T {
+function createActions<T>(actions: StringMap): T {
   return createActionsHelper(null, actions) as unknown as T;
 }
 
-export function keyMirror(keys: string[]): StringMap {
+function keyMirror(keys: string[]): StringMap {
   return keys.reduce((previous: StringMap, key: string) => ({ ...previous, [key]: key }), {});
 }
 
-export type StandardAction = {
+type StandardAction = {
   BEGIN: string;
   PROGRESS: string;
   SUCCESS: string;
@@ -34,7 +34,7 @@ export type StandardAction = {
   CANCEL: string;
 }
 
-export function standardActions(): StandardAction {
+function standardActions(): StandardAction {
   return keyMirror([
     'BEGIN',
     'PROGRESS',
@@ -42,4 +42,10 @@ export function standardActions(): StandardAction {
     'FAILURE',
     'CANCEL',
   ]) as StandardAction;
+}
+
+export = {
+  createActions,
+  keyMirror,
+  standardActions,
 }

@@ -3,7 +3,7 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "target": "es5",
-    "module": "umd",
+    "module": "CommonJS",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "sourceMap": true,
