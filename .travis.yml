@@ -1,18 +1,32 @@
 language: node_js
-cache:
-  yarn: true
-  directories:
-    - ~/.npm
-notifications:
-  email: true
+cache: npm
 node_js:
-  - '8'
-install: yarn
+  - '10'
+env:
+  global:
+    - CC_TEST_REPORTER_ID=c68c045998880a2a495f56a10fa936818b9892af84e53ed4248a8714ca564da8
+stages:
+  - name: Prepare
+    if: branch != master OR type = pull_request
+  - name: Release
+    if: branch = master AND type != pull_request
+
 jobs:
   include:
-    - stage: Release
-      if: branch = master
+    - stage: Prepare
+      name: Test
+      before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+    - name: Build
       script:
-        - yarn build
-        - yarn verify-es5
-        - yarn semantic-release
+        - npm run build
+        - npm run verify-es5
+      after_script:
+      - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT
+    - stage: Release
+      script:
+        - npm run build
+        - npm run verify-es5
+        - npm run semantic-release
