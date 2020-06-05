@@ -5,10 +5,11 @@
     "target": "es5",
     "module": "CommonJS",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "allowJs": false,
     "sourceMap": true,
     "baseUrl": ".",
-    "declaration": true
+    "declaration": true,
   },
   "include": [
     "src/**/*.ts"

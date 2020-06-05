@@ -1,6 +1,7 @@
 module.exports = {
   "parser": '@typescript-eslint/parser',
   "extends": [
+    '@groove-labs/eslint-config-groove',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
@@ -13,5 +14,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-empty-function': 'error',
+    'import/no-unresolved': 'off',
   },
 };
