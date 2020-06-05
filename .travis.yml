@@ -18,6 +18,6 @@ jobs:
     - stage: Release
       if: branch = master
       script:
-        - yarn build
-        - yarn verify-es5
-        - yarn semantic-release
+        - npm run build
+        - npm run verify-es5
+        - npm run semantic-release
