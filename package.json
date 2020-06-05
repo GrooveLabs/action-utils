@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "semantic-release": "./node_modules/.bin/semantic-release",
     "start": "npm run build --watch",
     "test": "node_modules/.bin/jest src/index.test.ts",
     "verify-es5": "./node_modules/.bin/es-check es5 './build/**/*.js'"

@@ -16,7 +16,7 @@ jobs:
       after_script:
       - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT
     - stage: Release
-      if: branch = master
+      if: branch = master AND type != pull_request
       script:
         - npm run build
         - npm run verify-es5
