@@ -7,7 +7,6 @@ env:
     - CC_TEST_REPORTER_ID=c68c045998880a2a495f56a10fa936818b9892af84e53ed4248a8714ca564da8
 stages:
   - name: Prepare
-    if: branch != master OR type = pull_request
   - name: Release
     if: branch = master AND type != pull_request
 
