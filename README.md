@@ -2,6 +2,18 @@
 
 A set of helper functions that are meant to help declare redux actions in a object-like way while still allowing for well-named actions.
 
+## Installation
+
+```zsh
+npm i @groove-labs/action-utils
+```
+
+```zsh
+yarn add @groove-labs/action-utils
+```
+
+## Documentation
+
 ### `createActions(actions:Object)`
 Takes in a plain javascript object and returns back the same object shape, but with every leaf in the tree prefixed with all its parents. For example:
 ```javascript
