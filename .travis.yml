@@ -1,7 +1,5 @@
 language: node_js
 cache: npm
-node_js:
-  - '10'
 env:
   global:
     - CC_TEST_REPORTER_ID=c68c045998880a2a495f56a10fa936818b9892af84e53ed4248a8714ca564da8
