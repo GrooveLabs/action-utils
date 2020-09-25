@@ -1,0 +1,12 @@
+# Files
+.eslintignore
+.eslintrc.js
+.gitignore
+.nvmrc
+.travis.yml
+jest.config.js
+tsconfig.json
+
+# Directories
+example/*
+src/*
