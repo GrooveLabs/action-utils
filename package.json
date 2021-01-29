@@ -21,7 +21,6 @@
     ]
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "build": "tsc",
     "semantic-release": "./node_modules/.bin/semantic-release",
     "start": "npm run build --watch",
@@ -39,7 +38,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",
-    "es-check": "^5.1.0",
+    "es-check": "^5.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -52,8 +51,5 @@
     "ts-jest": "^26.1.0",
     "ts-loader": "^6.2.1",
     "typescript": "3.8.3"
-  },
-  "resolutions": {
-    "dot-prop": ">=5.1.1"
   }
 }
